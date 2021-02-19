@@ -1,0 +1,43 @@
+
+#    eureka端口号
+server:
+  port: 8010
+ #通过相同的name 不同的端口号调用
+
+spring:
+  application:
+    name: consumer-client
+#eureka地址路径
+eureka:
+  client:
+    serviceUrl:
+       defaultZone: http://users:123456@localhost:8761/eureka
+       #日志输出
+logging:
+  level:
+    root: INFO
+
+
+
+#    eureka:
+#      client:
+#        serviceUrl:
+#          defaultZone: http://users:123456@localhost:8761/eureka-server
+#      instance:
+#        instanceId: client-01
+#        preferIpAddress: true
+#
+#    spring:
+#      cloud:
+#        config:
+#          discovery:
+#            enabled: true
+#            serviceId: config-server-my
+#    #      uri: http://localhost:8551/ # 配置中心的具体地址
+#          name: spring-config  # 对应{application}部分
+#          profile: master  # 对应{profile}部分
+#          label: master  # 对应git的分支，如果配置中心使用的是本地存储，则该参数无用
+#
+#
+
+
